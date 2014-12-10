@@ -1,0 +1,28 @@
+{
+    "name": "pat-shopping-cart",
+    "version": "0.0.1",
+    "homepage": "https://github.com/Patternslib/pat-shopping-cart",
+    "authors": [
+        "Syslab.com GmbH"
+    ],
+    "description": "A pattern for adding items to a cart, and performing an action on them",
+    "main": "src/pat-shopping-cart.js",
+    "keywords": [
+        "patterns",
+        "pat-shopping-cart"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "patternslib": "~2.0.4"
+    },
+    "moduleType": [
+        "amd"
+    ]
+}

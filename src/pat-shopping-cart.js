@@ -29,7 +29,9 @@
             var options = parser.parse($el, opts);
             $el.click($.proxy(function() {
                 if ("action" in options) {
-                    this.processCart(options);
+                    if (options.action == "empty") {
+                        this.emptyCart();
+                    } else this.processCart(options);
                 } else if ("id" in options) {
                     if (this.isAddedToCart(options)) {
                         this.removeFromCart($el, options);
@@ -91,6 +93,9 @@
                 $(this).removeClass("has-items");
                 $(this).addClass("is-empty");
             });
+            $(".pat-shopping-cart.in-cart").each(function(index) {
+                $(this).removeClass("in-cart");
+            });
         },
 
         cartIsEmpty: function($el, options) {
@@ -104,12 +109,8 @@
 
             // Note: we assume success and clear the cart
             this.emptyCart();
+
             $("#shopping-cart").remove();
-            $(".pat-shopping-cart.in-cart").each(function(index) {
-                $(this).removeClass("in-cart");
-            });
-
-
             $("body").append(
                 '<form id="shopping-cart" action="'+action+'" method="post">'+
                     '<input name="shopping-cart" type="hidden" value="'+downloads+'"/>'+

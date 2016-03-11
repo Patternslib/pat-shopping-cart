@@ -18,7 +18,7 @@
     var parser = new Parser("shopping-cart");
     parser.add_argument("action");
     parser.add_argument("id");
-    parser.add_argument("keep");
+    parser.add_argument("contents");
     parser.add_argument("patterns");
 
     // We now create an object which encapsulates the pattern's methods
@@ -29,7 +29,17 @@
 
         init: function($el, opts) {
             var options = parser.parse($el, opts);
-            $el.click($.proxy(function() {
+            if ($el.attr("type") == 'checkbox') {
+                $el.bind("change", $.proxy(function(e) {
+                    if ("id" in options) {
+                        if (this.isAddedToCart(options)) {
+                            this.removeFromCart($el, options);
+                        }
+                        else this.addToCart($el, options);
+                    };
+                }, this));
+            } else {
+                $el.bind("click", $.proxy(function(e) {
                 if ("action" in options) {
                     if (options.action == "empty") {
                         this.emptyCart();
@@ -40,7 +50,9 @@
                     }
                     else this.addToCart($el, options);
                 };
-            }, this));
+                }, this));
+            };
+
             if ("action" in options) {
                 if (this.cartIsEmpty()) {
                     $el.addClass("is-empty");
@@ -58,7 +70,7 @@
                     });
                 };
             };
-            if ("keep" in options && options.keep.toLowerCase() == 'true') {
+            if ("contents" in options && options.contents.toLowerCase() == 'keep') {
                 options.keep = true;
             } else options.keep = false;
             if (!("patterns" in options)) options.patterns = "";
@@ -134,6 +146,7 @@
             );
 
             registry.scan(form);
+            $('body').append(form);
             form.submit();
         }
 

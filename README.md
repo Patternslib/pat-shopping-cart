@@ -25,9 +25,9 @@ To add a button to empty the cart use "action: empty":
       Empty your shopping cart
     </a>
 
-To use an action without clearing the cart use "keep: true":
+To use an action without clearing the cart use "contents: keep":
 
-    <a class="pat-shopping-cart" data-pat-shopping-cart="action: delete-confirmation; keep: true">
+    <a class="pat-shopping-cart" data-pat-shopping-cart="action: delete-confirmation; contents: keep">
       Delete the selected items
     </a>
 

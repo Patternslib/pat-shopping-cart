@@ -122,8 +122,6 @@
             $(".pat-shopping-cart.has-items").each(function(index) {
                 $(this).removeClass("has-items");
                 $(this).addClass("is-empty");
-                $(this).click();
-                $(this).attr("disabled", "disabled");
             });
             $(".pat-shopping-cart.in-cart").each(function(index) {
                 $(this).removeClass("in-cart");

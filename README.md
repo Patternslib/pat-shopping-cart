@@ -36,3 +36,10 @@ You can pass on other patterns to the action "patterns: pat-modal":
     <a class="pat-shopping-cart" data-pat-shopping-cart="action: delete-confirmation; patterns: pat-modal">
       Delete the selected items
     </a>
+
+
+You can configure patterns passed on to the action by prepending data-pat-shopping-cart to the pattern:
+
+    <a class="pat-shopping-cart" data-pat-shopping-cart="action: delete-confirmation; patterns: pat-inject" data-pat-shopping-cart-inject="source: #main-content; target: #footer">
+      Delete the selected items
+    </a>

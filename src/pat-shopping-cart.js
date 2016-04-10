@@ -93,6 +93,7 @@
 
         removeFromCart: function($el, options) {
             var cart = this.storage.get("cart");
+            $el.removeClass("in-cart");
             if (cart.length === 1) {
                 this.emptyCart();
             } else {
@@ -100,12 +101,6 @@
                 cart.splice(itemIndex, 1);
                 this.storage.set("cart", cart);
             }
-            $el.removeClass("in-cart");
-            if ($el.attr("type") == "checkbox") {
-                $el.parentsUntil("lable").each(function(index, elem) {
-                    $(elem).removeClass("checked").addClass("unchecked");
-                });
-            };
         },
 
         isAddedToCart: function(options) {
@@ -118,14 +113,21 @@
         },
 
         emptyCart: function() {
-            this.storage.remove("cart");
             $(".pat-shopping-cart.has-items").each(function(index) {
                 $(this).removeClass("has-items");
                 $(this).addClass("is-empty");
             });
-            $(".pat-shopping-cart.in-cart").each(function(index) {
-                $(this).removeClass("in-cart");
-            });
+            var cartItems = $(".pat-shopping-cart.in-cart");
+            for (var i = 0; i < cartItems.length; i++) {
+                var item = $(cartItems[i]);
+                var opts = parser.parse(item, item.data());
+                this.removeFromCart(item, opts);
+                if (item.attr("type") == "checkbox") {
+                    item.prop("checked", false).trigger("change");
+                };
+            };
+
+            this.storage.remove("cart");
         },
 
         cartIsEmpty: function($el, options) {
@@ -135,11 +137,19 @@
 
         processCart: function($el, options) {
             var cart = this.storage.get("cart");
-
+            var patternsList = options.patterns.split(' ');
+            var patternsDataStr = '';
+            
             if (!options.keep) this.emptyCart();
 
+            for (var i = 0; i < patternsList.length; i++) {
+                var patternDataId = 'pat-shopping-cart-' + patternsList[i].replace('pat-', '');
+                var patternData = $el.data(patternDataId);
+                patternsDataStr += 'data-' + patternsList[i] + '=' + '"' + patternData +'"';
+            };
+
             var form = $(
-                '<form action="'+options.action+'" class="'+options.patterns+'" method="post">'+
+                '<form action="'+options.action+'" class="'+options.patterns+'" '+patternsDataStr+' method="post">'+
                     '<input name="shopping-cart" type="hidden" value="'+cart+'"/>'+
                 '</form>'
             );

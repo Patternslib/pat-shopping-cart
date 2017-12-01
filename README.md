@@ -43,3 +43,4 @@ You can configure patterns passed on to the action by prepending data-pat-shoppi
     <a class="pat-shopping-cart" data-pat-shopping-cart="action: delete-confirmation; patterns: pat-inject" data-pat-shopping-cart-inject="source: #main-content; target: #footer">
       Delete the selected items
     </a>
+

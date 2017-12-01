@@ -15,5 +15,5 @@
         "http-server": "^0.7.3"
     },
     "devDependencies": {},
-    "license": "MIT",
+    "license": "MIT"
 }

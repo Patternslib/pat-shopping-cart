@@ -20,7 +20,6 @@
         "tests"
     ],
     "dependencies": {
-        "patternslib": "~2.0.4"
     },
     "moduleType": [
         "amd"

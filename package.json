@@ -1,6 +1,6 @@
 {
     "name": "pat-shopping-cart",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A pattern for adding items to a cart, and performing an action on them",
     "author": {
         "name": "Cillian de Róiste",

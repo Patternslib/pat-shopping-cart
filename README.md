@@ -1,4 +1,4 @@
-**pat-shopping-cart**
+# pat-shopping-cart
 
 Add a value to a "shopping cart" and process this "shopping cart".
 

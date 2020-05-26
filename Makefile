@@ -1,24 +1,15 @@
-BOWER 		?= node_modules/.bin/bower
-HTTPSERVE   ?= node_modules/.bin/http-server
-
 all:: designerhappy
 
-########################################################################
-## Install dependencies
 
 stamp-npm: package.json
 	npm install
 	touch stamp-npm
 
-stamp-bower: stamp-npm
-	$(BOWER) install
-	touch stamp-bower
 
 clean::
-	rm -f stamp-npm stamp-bower
-	rm -rf node_modules src/bower_components ~/.cache/bower
+	rm -rf stamp-npm node_modules
 
 
-designerhappy:: stamp-npm stamp-bower
-	printf "\n\n Designer, you can be happy now.\n Go to http://localhost:4001/demo/ to see the demo \n\n\n\n"
-	$(HTTPSERVE) -p 4001
+designerhappy:: stamp-npm
+	printf "\n\n Designer, you can be happy now.\n Go to http://localhost:8000 to see the demo \n\n\n\n"
+	npm run start

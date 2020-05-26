@@ -1,4 +1,6 @@
-bower_components
 node_modules
-stamp-bower
 stamp-npm
+package-lock.json
+yarn.lock
+*~
+.*.sw?

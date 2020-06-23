@@ -1,8 +1,8 @@
 import $ from "jquery";
-import Base from "patternslib/src/core/base";
-import Parser from "patternslib/src/core/parser";
-import registry from "patternslib/src/core/registry";
-import store from "patternslib/src/core/store";
+import { base as Base } from "@patternslib/core";
+import { parser as Parser } from "@patternslib/core";
+import { registry } from "@patternslib/core";
+import { store } from "@patternslib/core";
 
 
 const parser = new Parser("shopping-cart");

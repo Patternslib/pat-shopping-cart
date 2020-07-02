@@ -12,7 +12,7 @@
     "url": "git@git.syslab.com:syslab/pat-shopping-cart.git"
   },
   "dependencies": {
-    "patternslib": "https://github.com/Patternslib/Patterns#cc8d8d4ddfacc9d80fecf0b183f39eef365abd9f"
+    "patternslib": "https://github.com/Patternslib/Patterns#es6"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.6",

@@ -11,10 +11,5 @@
         "url": "git@git.syslab.com:syslab/pat-shopping-cart.git"
     },
     "dependencies": {},
-    "devDependencies": {
-        "bower": "^1.3.12",
-        "http-server": "^0.11.1",
-        "patternslib": "git@github.com:Patternslib/patterns"
-    },
     "license": "MIT"
 }

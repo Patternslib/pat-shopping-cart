@@ -1,5 +1,5 @@
 node_modules
-stamp-npm
+stamp-yarn
 package-lock.json
 yarn.lock
 *~

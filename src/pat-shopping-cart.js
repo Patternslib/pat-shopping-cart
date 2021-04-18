@@ -1,8 +1,8 @@
 import $ from "jquery";
-import Base from "patternslib/src/core/base";
-import Parser from "patternslib/src/core/parser";
-import registry from "patternslib/src/core/registry";
-import store from "patternslib/src/core/store";
+import Base from "@patternslib/patternslib/src/core/base";
+import Parser from "@patternslib/patternslib/src/core/parser";
+import registry from "@patternslib/patternslib/src/core/registry";
+import store from "@patternslib/patternslib/src/core/store";
 
 const parser = new Parser("shopping-cart");
 parser.add_argument("action");
@@ -20,7 +20,7 @@ export default Base.extend({
         if ($el.attr("type") == "checkbox") {
             $el.bind(
                 "change",
-                $.proxy(function (e) {
+                $.proxy(function () {
                     if ("id" in options) {
                         if (this.isAddedToCart(options)) {
                             this.removeFromCart($el, options);
@@ -31,7 +31,7 @@ export default Base.extend({
         } else {
             $el.bind(
                 "click",
-                $.proxy(function (e) {
+                $.proxy(function () {
                     if ("action" in options) {
                         if (options.action == "empty") {
                             this.emptyCart();
@@ -72,7 +72,7 @@ export default Base.extend({
         var cart = this.storage.get("cart");
         if (cart === null) {
             this.storage.set("cart", [options.id]);
-            $(".pat-shopping-cart.is-empty").each(function (index) {
+            $(".pat-shopping-cart.is-empty").each(function () {
                 $(this).removeClass("is-empty").addClass("has-items");
                 $(this).removeAttr("disabled");
             });
@@ -105,7 +105,7 @@ export default Base.extend({
     },
 
     emptyCart: function () {
-        $(".pat-shopping-cart.has-items").each(function (index) {
+        $(".pat-shopping-cart.has-items").each(function () {
             $(this).removeClass("has-items");
             $(this).addClass("is-empty");
         });
@@ -122,7 +122,7 @@ export default Base.extend({
         this.storage.remove("cart");
     },
 
-    cartIsEmpty: function ($el, options) {
+    cartIsEmpty: function () {
         return this.storage.get("cart") === null;
     },
 
@@ -137,8 +137,7 @@ export default Base.extend({
             var patternDataId =
                 "pat-shopping-cart-" + patternsList[i].replace("pat-", "");
             var patternData = $el.data(patternDataId);
-            patternsDataStr +=
-                "data-" + patternsList[i] + "=" + '"' + patternData + '"';
+            patternsDataStr += "data-" + patternsList[i] + "=" + '"' + patternData + '"';
         }
 
         var form = $(

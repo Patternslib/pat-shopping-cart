@@ -1,6 +1,6 @@
 {
-    "name": "pat-shopping-cart",
-    "version": "1.0.0",
+    "name": "@patternslib/pat-shopping-cart",
+    "version": "0.9.0",
     "description": "A pattern for adding items to a cart, and performing an action on them",
     "license": "MIT",
     "main": "./src/pat-shopping-cart.js",
@@ -69,9 +69,9 @@
         "name": "Syslab GesmbH",
         "email": "dev@syslab.com"
     },
-    "homepage": "https://git.syslab.com/syslab/pat-shopping-cart",
+    "homepage": "https://github.com/patternslib/pat-shopping-cart",
     "repository": {
         "type": "git",
-        "url": "git@git.syslab.com:syslab/pat-shopping-cart.git"
+        "url": "https://github.com/patternslib/pat-shopping-cart.git"
     }
 }

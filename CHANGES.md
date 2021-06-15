@@ -1,3 +1,17 @@
+## [1.1.0](https://github.com/patternslib/pat-shopping-cart/compare/1.0.0...1.1.0) (2021-06-15)
+
+
+### Maintenance
+
+* Test updates after jest upgrade. ([ed9c1df](https://github.com/patternslib/pat-shopping-cart/commit/ed9c1df78db7d64be40b1208e4903a2aa9e7cc2c))
+* **dependencies:** Depend on Patternslib v4.4.0. ([4dc5ad7](https://github.com/patternslib/pat-shopping-cart/commit/4dc5ad7d1fc80af9673bb6bdc2be3688dd99ec01))
+* **dependencies:** Upgrade dependencies on minor+patch level. ([cd98aa3](https://github.com/patternslib/pat-shopping-cart/commit/cd98aa316b1a1a2587d6e431f2098ead620be4be))
+* **make release-patch:** Add missing patch for patch level releases. ([74a6289](https://github.com/patternslib/pat-shopping-cart/commit/74a6289f65af4efc0dbf72aedbb286b8ccbc778f))
+* **Release:** Remove the release-web target. Only Patternslib releases are pushed to Patterns-releases on Github. ([4e91f8f](https://github.com/patternslib/pat-shopping-cart/commit/4e91f8fcd41000d27be008588f44b646b7c48d1a))
+* **Release process:** Do not include the release commit in the changelog. ([3b50c53](https://github.com/patternslib/pat-shopping-cart/commit/3b50c53a11123f00eeabc495ce96c2049fb209cd))
+* **webpack:** Adapt start script to recent dependency changes. ([dd67bc4](https://github.com/patternslib/pat-shopping-cart/commit/dd67bc4496f10a793841d8fd79b778fb9f2845f9))
+* **webpack:** Simplify webpack. ([134ab1d](https://github.com/patternslib/pat-shopping-cart/commit/134ab1d7a6759066b30af02430d8951ae6727165))
+
 ## 1.0.0 (2021-04-20)
 
 

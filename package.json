@@ -1,6 +1,6 @@
 {
     "name": "@patternslib/pat-shopping-cart",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A pattern for adding items to a cart, and performing an action on them",
     "license": "MIT",
     "main": "./src/pat-shopping-cart.js",

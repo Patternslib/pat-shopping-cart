@@ -8,7 +8,7 @@ describe("pat-shopping-cart", () => {
         document.body.innerHTML = "";
     });
 
-    it("is initialized correctly", async (done) => {
+    it("is initialized correctly", async () => {
         document.body.innerHTML = `
             <ul>
               <li
@@ -67,7 +67,5 @@ describe("pat-shopping-cart", () => {
         expect(actions[0].classList.contains("has-items")).toBe(true);
         expect(actions[1].classList.contains("has-items")).toBe(true);
         expect(actions[2].classList.contains("has-items")).toBe(true);
-
-        done();
     });
 });

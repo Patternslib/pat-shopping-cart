@@ -1,3 +1,20 @@
+## [2.0.0](https://github.com/patternslib/pat-shopping-cart/compare/1.1.0...2.0.0) (2021-11-18)
+
+
+### Breaking Changes
+
+* Upgrade to Webpack 5. ([0381039](https://github.com/patternslib/pat-shopping-cart/commit/03810398869f343bbcfd45564706c13612644f40))
+
+
+
+### Maintenance
+
+* **build:** Extend Patternslib release-it config file. ([ade4792](https://github.com/patternslib/pat-shopping-cart/commit/ade4792d233591bfba2ac190b133d12960d653c3))
+
+* **build:** Release on GitHub releases. ([0f7474d](https://github.com/patternslib/pat-shopping-cart/commit/0f7474df6d05bb75b1bb17efc40aebabf5433e53))
+
+* Upgrade up to minor versions. ([1ab72bf](https://github.com/patternslib/pat-shopping-cart/commit/1ab72bffd0dec4e93669163b59aa3877fdad4bce))
+
 ## [1.1.0](https://github.com/patternslib/pat-shopping-cart/compare/1.0.0...1.1.0) (2021-06-15)
 
 

@@ -1,4 +1,3 @@
-import "regenerator-runtime/runtime"; // needed for ``await`` support
 import "./pat-shopping-cart";
 import registry from "@patternslib/patternslib/src/core/registry";
 import utils from "@patternslib/patternslib/src/core/utils";

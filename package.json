@@ -4,8 +4,8 @@
     "description": "A pattern for adding items to a cart, and performing an action on them",
     "license": "MIT",
     "main": "./src/pat-shopping-cart.js",
-    "dependencies": {
-        "@patternslib/patternslib": "^6.0.1"
+    "peerDependencies": {
+        "@patternslib/patternslib": "*"
     },
     "devDependencies": {
         "@babel/core": "^7.16.0",

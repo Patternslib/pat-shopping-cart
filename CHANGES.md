@@ -2,6 +2,16 @@
 
 
 
+## [3.0.0](https://github.com/patternslib/pat-shopping-cart/compare/3.0.0-alpha.0...3.0.0) (2022-06-28)
+
+
+### Maintenance
+
+
+* @patternslib/patternslib needs to be installed. Adding to devDependencies to avoid version clashes with other packages depending on it. ([80766c2](https://github.com/patternslib/pat-shopping-cart/commit/80766c2e97ba1f1f2b5f24c42444c9f5a47fa135))
+
+* Upgrade to @patternslib/dev 2.2.0 and adapt module federation config. ([5cd6a7b](https://github.com/patternslib/pat-shopping-cart/commit/5cd6a7b967cd1e573307fa9daabeb629326ab83b))
+
 ## [3.0.0-alpha.0](https://github.com/patternslib/pat-shopping-cart/compare/2.0.0...3.0.0-alpha.0) (2022-06-15)
 
 

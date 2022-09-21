@@ -1,5 +1,6 @@
 import $ from "jquery";
 import Base from "@patternslib/patternslib/src/core/base";
+import events from "@patternslib/patternslib/src/core/events";
 import Parser from "@patternslib/patternslib/src/core/parser";
 import registry from "@patternslib/patternslib/src/core/registry";
 import store from "@patternslib/patternslib/src/core/store";
@@ -140,22 +141,16 @@ export default Base.extend({
             patternsDataStr += "data-" + patternsList[i] + "=" + '"' + patternData + '"';
         }
 
-        var form = $(
-            '<form action="' +
-                options.action +
-                '" class="' +
-                options.patterns +
-                '" ' +
-                patternsDataStr +
-                ' method="post">' +
-                '<input name="shopping-cart" type="hidden" value="' +
-                cart +
-                '"/>' +
-                "</form>"
-        );
+        const $form = $(`<form
+            action="${options.action}"
+            class="${options.patterns}"
+            ${patternsDataStr}
+            method="post">
+          <input name="shopping-cart" type="hidden" value="${cart}" />
+        </form>`);
 
-        registry.scan(form);
-        $("body").append(form);
-        form.submit();
+        registry.scan($form);
+        $("body").append($form);
+        $form[0].dispatchEvent(events.submit_event());
     },
 });

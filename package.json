@@ -5,8 +5,8 @@
     "license": "MIT",
     "main": "./src/pat-shopping-cart.js",
     "devDependencies": {
-        "@patternslib/dev": "^2.2.0",
-        "@patternslib/patternslib": "*"
+        "@patternslib/dev": "^4.4.0",
+        "@patternslib/patternslib": "9.11.1"
     },
     "scripts": {
         "start": "NODE_ENV=development webpack serve --config webpack.config.js",

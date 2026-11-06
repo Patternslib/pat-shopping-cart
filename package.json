@@ -4,9 +4,12 @@
     "description": "A pattern for adding items to a cart, and performing an action on them",
     "license": "MIT",
     "main": "./src/pat-shopping-cart.js",
+    "packageManager": "pnpm@12.16.1",
+    "dependencies": {
+        "@patternslib/patternslib": "^9.11.1"
+    },
     "devDependencies": {
-        "@patternslib/dev": "^4.4.0",
-        "@patternslib/patternslib": "9.11.1"
+        "@patternslib/dev": "4.4.0"
     },
     "scripts": {
         "start": "NODE_ENV=development webpack serve --config webpack.config.js",
@@ -36,8 +39,5 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/patternslib/pat-shopping-cart.git"
-    },
-    "dependencies": {
-        "jquery": "^3.6.0"
     }
 }
